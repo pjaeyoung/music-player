@@ -93,17 +93,176 @@ function App() {
             <section className="section-explore-new">
               <h2>Explore new</h2>
               <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>
+                  <div className="shadow"></div>
+                  <img
+                    src="./images/explore1.jpg"
+                    alt=""
+                    width={150}
+                    height={150}
+                  />
+                  <span className="singer">Zak Abel</span>
+                  <span className="title">Love Song</span>
+                </li>
+                <li>
+                  <div className="shadow"></div>
+                  <img
+                    src="./images/explore2.jpg"
+                    alt=""
+                    width={150}
+                    height={150}
+                  />
+                  <span className="singer">Kendrik Lamar</span>
+                  <span className="title">kombucha Burps</span>
+                </li>
+                <li>
+                  <div className="shadow"></div>
+                  <img
+                    src="./images/explore3.jpg"
+                    alt=""
+                    width={150}
+                    height={150}
+                  />
+                  <span className="singer">Avicli ft.Derulo</span>
+                  <span className="title">On The Regular</span>
+                </li>
+                <li>
+                  <div className="shadow"></div>
+                  <img
+                    src="./images/explore4.jpg"
+                    alt=""
+                    width={150}
+                    height={150}
+                  />
+                  <span className="singer">Kaytranada</span>
+                  <span className="title">El Sanbroso</span>
+                </li>
+                <li>
+                  <div className="shadow"></div>
+                  <img
+                    src="./images/explore5.jpg"
+                    alt=""
+                    width={150}
+                    height={150}
+                  />
+                  <span className="singer">ESTA</span>
+                  <span className="title">Mark Off Soul Flip</span>
+                </li>
               </ul>
             </section>
             <section className="section-popular">
               <h2>Popular</h2>
+              <ul>
+                <li>
+                  <div>
+                    <img
+                      src="./images/explore1.jpg"
+                      alt=""
+                      width={35}
+                      height={35}
+                    ></img>
+                    <div>1</div>
+                    <div className="title">Love Song</div>
+                  </div>
+                  <div>
+                    <div>3:23</div>
+                    <button className="button-more">
+                      <span className="material-symbols-outlined">
+                        more_horiz
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img
+                      src="./images/explore2.jpg"
+                      alt=""
+                      width={35}
+                      height={35}
+                    ></img>
+                    <div>2</div>
+                    <div className="title">Kambucha Burps</div>
+                  </div>
+                  <div>
+                    <div>5:36</div>
+                    <button className="button-more">
+                      <span className="material-symbols-outlined">
+                        more_horiz
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img
+                      src="./images/explore3.jpg"
+                      alt=""
+                      width={35}
+                      height={35}
+                    ></img>
+                    <div>3</div>
+                    <div className="title">On The Regular</div>
+                  </div>
+                  <div>
+                    <div>2:39</div>
+                    <button className="button-more">
+                      <span className="material-symbols-outlined">
+                        more_horiz
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img
+                      src="./images/explore4.jpg"
+                      alt=""
+                      width={35}
+                      height={35}
+                    ></img>
+                    <div>4</div>
+                    <div className="title">EI Sambroso</div>
+                  </div>
+                  <div>
+                    <div>3:26</div>
+                    <button className="button-more">
+                      <span className="material-symbols-outlined">
+                        more_horiz
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <img
+                      src="./images/explore5.jpg"
+                      alt=""
+                      width={35}
+                      height={35}
+                    ></img>
+                    <div>5</div>
+                    <div className="title">Mark Off Soul Flip</div>
+                  </div>
+                  <div>
+                    <div>6:29</div>
+                    <button className="button-more">
+                      <span className="material-symbols-outlined">
+                        more_horiz
+                      </span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
             </section>
             <section className="section-mood">
               <h2>Mood</h2>
+              <ul>
+                <li>Ghetto Rap</li>
+                <li>Twerk Baby</li>
+                <li>Party Breaker</li>
+                <li>Valentine Vibe</li>
+              </ul>
             </section>
           </div>
         </main>
