@@ -267,7 +267,38 @@ function App() {
           </div>
         </main>
       </div>
-      <footer></footer>
+      <footer>
+        <div className="play-controller">
+          <button>
+            <span className="material-symbols-outlined md-36">
+              skip_previous
+            </span>
+          </button>
+          <button>
+            <span className="material-symbols-outlined md-36">play_arrow</span>
+          </button>
+          <button>
+            <span className="material-symbols-outlined md-36">skip_next</span>
+          </button>
+        </div>
+        <div className="current-music">
+          <button>
+            <span className="material-symbols-outlined md-36">volume_down</span>
+          </button>
+          <div className="music-info">
+            <img src="./images/explore3.jpg" alt="" width={40} height={40} />
+            <div>
+              <span className="title">On The Regular</span>
+              <span className="singer">Avicli ft. Derulo</span>
+            </div>
+          </div>
+          <div className="progress-bar">
+            <span className="progress-value">1:59</span>
+            <progress max={100} value={80}></progress>
+            <span className="total-value">2:39</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

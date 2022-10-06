@@ -35,6 +35,9 @@ button {
   background-color: transparent;
   color: var(--color-lightgray);
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover {
