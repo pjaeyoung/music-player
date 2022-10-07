@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pjaeyoung/music-player/static/css/main.d68a8e51.css",
+    "main.js": "/pjaeyoung/music-player/static/js/main.a7035be1.js",
+    "index.html": "/pjaeyoung/music-player/index.html",
+    "main.d68a8e51.css.map": "/pjaeyoung/music-player/static/css/main.d68a8e51.css.map",
+    "main.a7035be1.js.map": "/pjaeyoung/music-player/static/js/main.a7035be1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d68a8e51.css",
+    "static/js/main.a7035be1.js"
+  ]
+}
