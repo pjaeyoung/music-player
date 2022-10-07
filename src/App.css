@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .top {
@@ -11,6 +12,9 @@
 }
 
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -20,7 +24,7 @@ footer {
 
 nav {
   min-width: 15rem;
-  height: 100%;
+  height: 100vh;
   padding: 1.6rem;
   border-right: 3px solid var(--color-gray);
 }
@@ -67,16 +71,24 @@ nav span {
 }
 
 main {
+  height: calc(100vh - 7rem);
   width: calc(100vw - 10rem);
-  padding: 2rem 6rem;
+  padding: 0 6rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 main header {
+  position: sticky;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   width: 100%;
-  padding-right: 5rem;
+  height: 5rem;
   color: var(--color-lightgray);
+  background-color: var(--color-darkgray);
+  z-index: 2;
 }
 
 .search {
@@ -118,15 +130,17 @@ h2 {
 }
 
 .sections {
-  padding-top: 2rem;
   display: grid;
   grid-template-areas:
     "explore explore"
     "popular mood";
+  gap: 2rem;
 }
 
 .sections section {
   min-height: 18rem;
+  width: 100%;
+  overflow: hidden;
 }
 
 .section-explore-new {
@@ -135,7 +149,7 @@ h2 {
 
 .section-explore-new ul {
   display: flex;
-  width: calc(100vw - 20rem);
+  width: 100%;
   overflow: auto;
 }
 
@@ -194,7 +208,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  min-width: 30rem;
+  min-width: 28rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   background-color: var(--color-gray);
@@ -216,6 +230,7 @@ h2 {
 .section-popular img {
   margin-right: 1.2rem;
   border-radius: 0.4rem;
+  object-fit: cover;
   -webkit-border-radius: 0.4rem;
   -moz-border-radius: 0.4rem;
   -ms-border-radius: 0.4rem;
@@ -253,7 +268,7 @@ h2 {
   -o-border-radius: 0.5rem;
 }
 
-.material-symbols-outlined.md-36 {
+.material-symbols-outlined.icon-size {
   font-size: 36px;
 }
 
@@ -269,13 +284,14 @@ h2 {
 
 .current-music {
   display: flex;
+  flex-wrap: wrap;
   padding: 0 2rem;
-  width: calc(100vw - 15rem);
 }
 
 .current-music img {
   border-radius: 0.4rem;
   margin: 0 1rem 0 2rem;
+  object-fit: cover;
   -webkit-border-radius: 0.4rem;
   -moz-border-radius: 0.4rem;
   -ms-border-radius: 0.4rem;
@@ -313,7 +329,7 @@ h2 {
 }
 
 .current-music progress {
-  min-width: 20rem;
+  display: flex;
   width: calc(100vw - 48rem);
   margin: 0 2rem;
   appearance: none;
@@ -343,4 +359,107 @@ h2 {
 
 .current-music .total-value {
   color: var(--color-lightgray);
+}
+
+@media screen and (max-width: 1210px) {
+  .sections {
+    grid-template-areas:
+      "explore"
+      "popular"
+      "mood";
+  }
+}
+
+@media screen and (max-width: 870px) {
+  nav {
+    display: none;
+  }
+
+  main header {
+    width: 100vw;
+  }
+
+  main {
+    width: 100vw;
+    padding: 0 1rem;
+  }
+
+  .material-symbols-outlined.icon-size {
+    font-size: 28px;
+  }
+
+  .play-controller {
+    width: 10rem;
+  }
+
+  .current-music .progress-bar {
+    margin-left: 0;
+  }
+  .current-music progress {
+    width: calc(100vw - 20rem);
+  }
+
+  .current-music .music-info {
+    min-width: 12rem;
+  }
+
+  .current-music img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+  }
+
+  .current-music .title {
+    font-size: 0.8rem;
+  }
+
+  .current-music .singer {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 404px) {
+  main header {
+    padding-right: 2rem;
+  }
+
+  .search:placeholder-shown {
+    visibility: hidden;
+  }
+
+  .section-popular li {
+    min-width: 0;
+  }
+
+  .section-popular .title {
+    margin: 0 1rem;
+  }
+
+  .section-popular img {
+    margin-right: 1rem;
+  }
+
+  .section-popular .button-more {
+    margin-left: 1rem;
+  }
+
+  .section-mood li {
+    min-width: 0;
+  }
+
+  .current-music {
+    padding: 1rem;
+  }
+
+  .current-music img {
+    margin: 0 0.5rem;
+  }
+
+  .current-music .music-info {
+    min-width: 0;
+  }
 }

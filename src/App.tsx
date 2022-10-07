@@ -270,20 +270,26 @@ function App() {
       <footer>
         <div className="play-controller">
           <button>
-            <span className="material-symbols-outlined md-36">
+            <span className="material-symbols-outlined icon-size">
               skip_previous
             </span>
           </button>
           <button>
-            <span className="material-symbols-outlined md-36">play_arrow</span>
+            <span className="material-symbols-outlined icon-size">
+              play_arrow
+            </span>
           </button>
           <button>
-            <span className="material-symbols-outlined md-36">skip_next</span>
+            <span className="material-symbols-outlined icon-size">
+              skip_next
+            </span>
           </button>
         </div>
         <div className="current-music">
           <button>
-            <span className="material-symbols-outlined md-36">volume_down</span>
+            <span className="material-symbols-outlined icon-size">
+              volume_down
+            </span>
           </button>
           <div className="music-info">
             <img src="./images/explore3.jpg" alt="" width={40} height={40} />
